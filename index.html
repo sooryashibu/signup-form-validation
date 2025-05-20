@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sign Up Form with Client-side Validation using HTML, CSS, Bootstrap, and JavaScript" />
+  <meta name="author" content="Your Name" />
+  <title>Sign Up Form</title>
+
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-container">
+      <h2 class="text-center mb-4">Sign Up</h2>
+      <form class="row g-3 needs-validation" novalidate id="signupForm">
+        <div class="col-12">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" required />
+          <div class="invalid-feedback">Please enter a valid full name (letters and spaces only).</div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required />
+          <div class="invalid-feedback">Password must be at least 8 characters with a number and special character.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" required />
+          <div class="invalid-feedback">Passwords do not match.</div>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="terms" required />
+            <label class="form-check-label" for="terms">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">You must agree before submitting.</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-success w-100" type="submit">Sign Up</button>
+        </div>
+      </form>
+
+      <!-- Success message -->
+      <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+        ✅ Sign up successful!
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 Your Name. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="js/validation.js"></script>
+</body>
+</html>
