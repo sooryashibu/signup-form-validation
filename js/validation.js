@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const confirmPassword = document.getElementById('confirmPassword');
   const terms = document.getElementById('terms');
   const successMessage = document.getElementById('successMessage');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  // Toggle password visibility
   const togglePassword = document.getElementById('togglePassword');
   const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
 
@@ -23,13 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Helper function to validate full name (only letters and spaces)
   function validateFullName(name) {
     const re = /^[a-zA-Z\s]+$/;
     return re.test(name.trim());
   }
 
-  // Helper function to validate password: min 8 chars, at least one number and one special char
   function validatePassword(pwd) {
     const re = /^(?=.*[0-9])(?=.*[!@#$%^&*])/;
     return pwd.length >= 8 && re.test(pwd);
@@ -39,33 +37,34 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     event.stopPropagation();
 
-    // Reset custom validity messages
     fullName.setCustomValidity('');
     email.setCustomValidity('');
     password.setCustomValidity('');
     confirmPassword.setCustomValidity('');
     terms.setCustomValidity('');
 
-    // Validate full name
     if (!validateFullName(fullName.value)) {
       fullName.setCustomValidity('Invalid full name');
     }
 
-    // Validate password
     if (!validatePassword(password.value)) {
       password.setCustomValidity('Password does not meet criteria');
     }
 
-    // Validate confirm password matches password
     if (password.value !== confirmPassword.value) {
       confirmPassword.setCustomValidity('Passwords do not match');
     }
 
-    // Check if form is valid
     if (form.checkValidity()) {
       successMessage.classList.remove('d-none');
       form.classList.remove('was-validated');
       form.reset();
+
+      submitBtn.disabled = true;
+      setTimeout(() => {
+        successMessage.classList.add('d-none');
+        submitBtn.disabled = false;
+      }, 3000);
     } else {
       successMessage.classList.add('d-none');
       form.classList.add('was-validated');
