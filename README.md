@@ -23,13 +23,14 @@ This project implements a responsive Sign Up form using **HTML**, **CSS**, **Boo
 
 ## Project Structure
 
+```text
 signup-form-validation/
-├── index.html # Main HTML file with form markup
+├── index.html            # Main HTML file with form markup
 ├── css/
-│ └── styles.css # Custom CSS for styling
+│   └── styles.css        # Custom CSS for styling
 ├── js/
-│ └── validation.js # JavaScript for form validation
-└── README.md # Project documentation
+│   └── validation.js     # JavaScript for form validation
+└── README.md             # Project documentation
 
 
 ## How to Use
