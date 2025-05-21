@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Sign Up Form with Client-side Validation using HTML, CSS, Bootstrap, and JavaScript" />
-  <meta name="author" content="Your Name" />
+  <meta name="author" content="soorya shibu" />
   <title>Sign Up Form</title>
 
   <!-- Bootstrap CSS only -->
@@ -34,12 +34,20 @@
         <div class="col-md-6">
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" id="password" required />
+          <div class="form-check mt-1">
+            <input class="form-check-input" type="checkbox" id="togglePassword" />
+            <label class="form-check-label" for="togglePassword">Show Password</label>
+          </div>
           <div class="invalid-feedback">Password must be at least 8 characters with a number and special character.</div>
         </div>
 
         <div class="col-md-6">
           <label for="confirmPassword" class="form-label">Confirm Password</label>
           <input type="password" class="form-control" id="confirmPassword" required />
+          <div class="form-check mt-1">
+            <input class="form-check-input" type="checkbox" id="toggleConfirmPassword" />
+            <label class="form-check-label" for="toggleConfirmPassword">Show Confirm Password</label>
+          </div>
           <div class="invalid-feedback">Passwords do not match.</div>
         </div>
 
@@ -67,7 +75,7 @@
 
   <footer>
     <div class="container">
-      &copy; 2025 Soorya Shibu. All rights reserved.
+      &copy; 2025 soorya shibu. All rights reserved.
     </div>
   </footer>
 
