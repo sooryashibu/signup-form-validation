@@ -15,31 +15,33 @@ This project implements a responsive Sign Up form using **HTML**, **CSS**, **Boo
   - Password (minimum 8 characters, including at least one number and one special character)  
   - Confirm Password matching  
   - Terms and Conditions checkbox  
-- Real-time validation feedback with Bootstrap's validation styles  
-- Success message display upon successful form submission  
+- Show/hide password and confirm password functionality for better usability  
+- Real-time validation feedback using Bootstrap's validation styles  
+- Success message display upon successful form submission, which auto-hides after 3 seconds  
 - Clean, green-themed UI for a pleasant user experience  
 
 ---
 
 ## Project Structure
 
-```text
 signup-form-validation/
-├── index.html            # Main HTML file with form markup
+├── index.html # Main HTML file with form markup
 ├── css/
-│   └── styles.css        # Custom CSS for styling
+│ └── styles.css # Custom CSS for styling
 ├── js/
-│   └── validation.js     # JavaScript for form validation
-└── README.md             # Project documentation
+│ └── validation.js # JavaScript for form validation and interactivity
+└── README.md # Project documentation
 
+---
 
 ## How to Use
 
 1. Clone or download the repository.  
 2. Open `index.html` in a modern web browser (Chrome, Firefox, Edge, etc.).  
 3. Fill out the form fields ensuring all validations are met.  
-4. Upon successful submission, a success message will appear.  
-5. If there are errors, the form will highlight the fields needing correction.  
+4. Use the show/hide password checkboxes to toggle password visibility if needed.  
+5. Upon successful submission, a success message will appear and disappear after 3 seconds.  
+6. If there are errors, the form will highlight the fields needing correction.  
 
 ---
 
@@ -56,17 +58,14 @@ signup-form-validation/
 
 - Only Bootstrap CSS is included via CDN for styling.  
 - No Bootstrap JavaScript dependencies are required.  
-- Custom JavaScript handles all validation logic.  
+- Custom JavaScript handles all validation and password toggle logic.  
 - The color scheme uses green tones for a fresh, clean look.  
 
 ---
 
 ## Author
 
-Soorya Shibu  
+**soorya shibu**  
 Email: brijithlooka@gmail.com  
 GitHub: [https://github.com/sooryashibu](https://github.com/sooryashibu)  
-Hosting URL: [https://sooryashibu.github.io/signup-form-validation/](https://sooryashibu.github.io/signup-form-validation/)  
-
----
-
+Live Demo: [https://sooryashibu.github.io/signup-form-validation/](https://sooryashibu.github.io/signup-form-validation/)
