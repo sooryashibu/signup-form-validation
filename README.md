@@ -22,7 +22,7 @@ This project implements a responsive Sign Up form using **HTML**, **CSS**, **Boo
 ---
 
 ## Project Structure
-
+---
 signup-form-validation/
 ├── index.html # Main HTML file with form markup
 ├── css/
