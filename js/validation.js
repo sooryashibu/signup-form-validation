@@ -7,6 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const terms = document.getElementById('terms');
   const successMessage = document.getElementById('successMessage');
 
+  // Toggle password visibility
+  const togglePassword = document.getElementById('togglePassword');
+  const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+
+  if (togglePassword) {
+    togglePassword.addEventListener('change', function () {
+      password.type = this.checked ? 'text' : 'password';
+    });
+  }
+
+  if (toggleConfirmPassword) {
+    toggleConfirmPassword.addEventListener('change', function () {
+      confirmPassword.type = this.checked ? 'text' : 'password';
+    });
+  }
+
   // Helper function to validate full name (only letters and spaces)
   function validateFullName(name) {
     const re = /^[a-zA-Z\s]+$/;
@@ -47,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Check if form is valid
     if (form.checkValidity()) {
-      // Hide form and show success message
       successMessage.classList.remove('d-none');
       form.classList.remove('was-validated');
       form.reset();
